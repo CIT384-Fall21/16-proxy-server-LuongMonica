@@ -13,7 +13,7 @@ RUN a2enmod autoindex
 # create dir for each site, copy index.html in, setup vhost files
 RUN mkdir /var/www/html/site1
 RUN mkdir /var/www/html/site2
-RUN mkdir /var/www/html/site3
+RUN mkdir -p /var/www/html/site3/special
 COPY images /home/images
 COPY site1.html /var/www/html/site1/index.html
 COPY site2.html /var/www/html/site2/index.html
