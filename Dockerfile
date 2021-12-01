@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y apache2 apache2-utils curl
 WORKDIR /etc/apache2
 
 RUN a2enmod ssl
+RUN a2enmod proxy
 RUN a2enmod autoindex
 
 # create dir for each site, copy index.html in, setup vhost files
