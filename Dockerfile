@@ -22,6 +22,10 @@ COPY vhosts/site1.conf /etc/apache2/sites-available
 COPY vhosts/site2.conf /etc/apache2/sites-available
 COPY vhosts/site3.conf /etc/apache2/sites-available
 
+# certs
+COPY site1.internal.cert /etc/ssl/certs
+COPY site1.internal.key /etc/ssl/private
+
 # enable the sites
 RUN a2ensite site1.conf
 RUN a2ensite site2.conf
