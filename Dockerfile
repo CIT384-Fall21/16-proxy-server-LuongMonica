@@ -3,10 +3,11 @@ FROM ubuntu:20.04
 ENV TZ=US/Pacific
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get update && apt-get install -y apache2 apache2-utils curl
+RUN apt-get update && apt-get install -y apache2 apache2-utils curl vim
 WORKDIR /etc/apache2
 
 RUN a2enmod ssl
+RUN a2enmod headers
 RUN a2enmod proxy
 RUN a2enmod autoindex
 
