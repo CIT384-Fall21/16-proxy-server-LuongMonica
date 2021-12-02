@@ -23,6 +23,7 @@ COPY site3.html /var/www/html/site3/index.html
 COPY vhosts/site1.conf /etc/apache2/sites-available
 COPY vhosts/site2.conf /etc/apache2/sites-available
 COPY vhosts/site3.conf /etc/apache2/sites-available
+COPY ports.conf /etc/apache2
 
 # certs
 COPY site1.internal.cert /etc/ssl/certs
