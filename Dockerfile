@@ -9,6 +9,7 @@ WORKDIR /etc/apache2
 RUN a2enmod ssl
 RUN a2enmod headers
 RUN a2enmod proxy
+RUN a2enmod proxy_http
 RUN a2enmod autoindex
 
 # create dir for each site, copy index.html in, setup vhost files
@@ -27,10 +28,11 @@ COPY vhosts/site3.conf /etc/apache2/sites-available
 COPY site1.internal.cert /etc/ssl/certs
 COPY site1.internal.key /etc/ssl/private
 
-# enable the sites
+# enable/disable the sites
 RUN a2ensite site1.conf
 RUN a2ensite site2.conf
 RUN a2ensite site3.conf
+RUN a2dissite 000-default.conf
 
 LABEL maintainer="monica.luong.234@my.csun.edu"
 EXPOSE 80
