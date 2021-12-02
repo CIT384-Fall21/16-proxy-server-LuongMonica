@@ -37,4 +37,6 @@ RUN a2dissite 000-default.conf
 
 LABEL maintainer="monica.luong.234@my.csun.edu"
 EXPOSE 80
+EXPOSE 8443
+EXPOSE 443
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
