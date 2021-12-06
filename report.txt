@@ -1,13 +1,10 @@
 Name: Monica Luong
 Lab Name: proxy-server
 Date Assigned: 12/01/2021
-Date Completed: 12/08/2021
+Date Completed: 12/06/2021
 Status:  Completed
-Outstanding Issues:
-	<!-- insert description -->
+Outstanding Issues: None
 
-Major Impediments:
-	<!-- insert description -->
+Major Impediments: None
 
-Feedback Comments:
-    <!-- insert description --> 
+Feedback Comments: a bit tricky but it was a good lab to help understand proxying
