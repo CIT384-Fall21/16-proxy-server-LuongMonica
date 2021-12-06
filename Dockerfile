@@ -26,8 +26,12 @@ COPY vhosts/site3.conf /etc/apache2/sites-available
 COPY ports.conf /etc/apache2
 
 # certs
-COPY site1.internal.cert /etc/ssl/certs
-COPY site1.internal.key /etc/ssl/private
+COPY certs/site1.internal.cert /etc/ssl/certs
+COPY certs/site1.internal.key /etc/ssl/private
+COPY certs/site2.internal.cert /etc/ssl/certs
+COPY certs/site2.internal.key /etc/ssl/private
+COPY certs/site3.internal.cert /etc/ssl/certs
+COPY certs/site3.internal.key /etc/ssl/private
 
 # enable/disable the sites
 RUN a2ensite site1.conf
